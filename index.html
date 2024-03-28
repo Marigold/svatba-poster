@@ -8,9 +8,48 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Modal Container -->
+    <div id="welcomeModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        Prosíme vyplňte nejdříve <a href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform">krátký dotazník</a>.
+      </div>
+    </div>
+
+  <script>
+  // Check if the newcomerCookie exists
+  if (!Cookies.get('newcomerCookie')) {
+      // Show the modal because it's a new user
+      var modal = document.getElementById('welcomeModal');
+      modal.style.display = "block";
+
+      // Set a cookie for 30 days
+      Cookies.set('newcomerCookie', 'true', { expires: 30 });
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // Optional: Close the modal if the user clicks anywhere outside of it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+
     <div class="page-wrapper">
       <div class="main-grid">
         <div class="title-container">
@@ -19,7 +58,13 @@
               >Eliška <br />&<br />
               Mojmír</span
             >
-            <span class="description"><a href="https://maps.app.goo.gl/TGjXcTkyMXSWkoJ7A" target="_blank">Rájenka u Pohořelic</a></span>
+            <span class="description"
+              ><a
+                href="https://maps.app.goo.gl/TGjXcTkyMXSWkoJ7A"
+                target="_blank"
+                >Rájenka u Pohořelic</a
+              ></span
+            >
             <span class="year">2024</span>
           </div>
         </div>
@@ -96,33 +141,30 @@
           </li>
         </div>
 
-        <!-- <div class="content">Content Area 4</div> -->
-
         <section class="main">
-            <h4>Kryglympiáda</h4>
-            <p>
-                Během celého sobotního dne bude probíhat Kryglympiáda, ve které můžou soutěžit
-                dospělí i děti.
-            </p>
-            <h4>Dětský koutek</h4>
-            <p>
-                Pokud se zrovna nebudete chtít věnovat dětem, můžete je odložit do dětského koutku
-                nebo na skákací hrad.
-            </p>
-            <h4>Co psi a děti?</h4>
-            <p>
-                Psi i děti jsou vítáni!
-            </p>
-            <h4>Dáte mi najíst?</h4>
-            <p>
-                Zajistíme jídlo od pátku večer až do neděle rána.
-            </p>
-            <h4>Lorem ipsum</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat,
-                vestibulum mi nec, ultrices ipsum. Nulla nec purus feugiat, vestibulum mi nec,
-                ultrices ipsum. Nulla nec purus feugiat, vestibulum mi nec, ultrices ipsum.
-            </p>
+          <h4>Dotazník</h4>
+          <p>
+            Prosím vyplňte <a href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform">krátký dotazník</a>
+            aby šlo všechno co nejhladčeji.
+          </p>
+          <h4>Kryglympiáda</h4>
+          <p>
+            Během celého sobotního dne bude probíhat <b>Kryglympiáda</b>. Soutěž pro děti i dospělé o tekuté ceny!
+          </p>
+          <h4>Dětský koutek</h4>
+          <p>
+            Pokud si budete chtít oddychnout od dětí, můžete je odložit na skákací hrad nebo do dětského koutku na hlídání.
+          </p>
+          <h4>Místo</h4>
+          <p>
+            Svatba se bude konat v areálu <a href="https://rajenka.cz/">Rájenka u Pohořelic</a>. <b>Nejsou to Pohořelice u Brna!</b>
+          </p>
+          <h4>Ubytování</h4>
+          <p>
+            Ubytování je zařízeno přímo v <a href="https://rajenka.cz/ubytovani/">areálu Rájenky</a>.
+          </p>
+          <h4>Svatební dary</h4>
+          <p>Máme malý dům, tak spíše než hmotné dary oceníme drobné na pivo.</p>
         </section>
       </div>
     </div>
