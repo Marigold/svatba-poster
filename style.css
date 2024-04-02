@@ -75,6 +75,18 @@ html {
   grid-row: 1;
   grid-column: 2;
   justify-content: center;
+  position: relative;
+  padding-left: 10px;
+}
+
+.first::before {
+  content: "";
+  position: absolute; /* Position it absolutely within .first */
+  left: 0; /* Adjust this to place the line correctly */
+  top: 0; /* Align to the top */
+  height: 100%; /* Span the full height */
+  width: 1px; /* Line thickness */
+  background-color: #000; /* Line color */
 }
 
 /* LINEUP SATURDAY */
@@ -117,7 +129,24 @@ html {
   font-size: 0.8em;
   grid-row: 3;
   grid-column: 2;
+  position: relative;
+  padding-left: 10px;
 }
+
+.main::before {
+  content: "";
+  position: absolute; /* Position it absolutely within .first */
+  left: 0; /* Adjust this to place the line correctly */
+  top: 0; /* Align to the top */
+  height: 100%; /* Span the full height */
+  width: 1px; /* Line thickness */
+  background-color: #000; /* Line color */
+}
+
+.main .question {
+  break-inside: avoid;
+}
+
 
 /* GALLERY */
 
