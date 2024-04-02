@@ -18,37 +18,40 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        Prosíme, vyplňte nejdříve <a href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform">krátký dotazník</a>, pokud jste to ještě neudělali.
+        Prosíme, vyplňte nejdříve
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform"
+          >krátký dotazník</a
+        >, pokud jste to ještě neudělali.
       </div>
     </div>
 
-  <script>
-  // Check if the newcomerCookie exists
-  if (!Cookies.get('newcomerCookie')) {
-      // Show the modal because it's a new user
-      var modal = document.getElementById('welcomeModal');
-      modal.style.display = "block";
+    <script>
+      // Check if the newcomerCookie exists
+      if (!Cookies.get("newcomerCookie")) {
+        // Show the modal because it's a new user
+        var modal = document.getElementById("welcomeModal");
+        modal.style.display = "block";
 
-      // Set a cookie for 30 days
-      Cookies.set('newcomerCookie', 'true', { expires: 30 });
-  }
+        // Set a cookie for 30 days
+        Cookies.set("newcomerCookie", "true", { expires: 30 });
+      }
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
 
-  // Optional: Close the modal if the user clicks anywhere outside of it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  </script>
-
+      // Optional: Close the modal if the user clicks anywhere outside of it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
 
     <div class="page-wrapper">
       <div class="main-grid">
@@ -112,7 +115,7 @@
             <span class="day">15 června</span>
           </li>
           <li class="date">
-            <span class="when">12:00</span>
+            <span class="when">11:30</span>
             <span class="who">Obřad</span>
           </li>
           <li class="date">
@@ -143,41 +146,65 @@
 
         <section class="main">
           <div class="question">
-          <h4>Dotazník</h4>
-          <p>
-            Prosím vyplňte <a href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform">krátký dotazník</a>
-            aby šlo všechno co nejhladčeji.
-          </p>
+            <h4>Dotazník</h4>
+            <p>
+              Prosím vyplňte
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScmEjT6nWsw8utyNXiSDSZjGcwWNxNeikA-sH2-RQeNVyTEUA/viewform"
+                >krátký dotazník</a
+              >
+              aby šlo všechno co nejhladčeji.
+            </p>
           </div>
           <div class="question">
-          <h4>Místo</h4>
-          <p>
-            Svatba se bude konat v areálu <a href="https://rajenka.cz/">Rájenka u Pohořelic</a>. <b>Nejsou to Pohořelice u Brna!</b>
-          </p>
+            <h4>Místo</h4>
+            <p>
+              Svatba se bude konat v areálu
+              <a href="https://rajenka.cz/">Rájenka u Pohořelic</a>.
+              <b>Nejsou to Pohořelice u Brna!</b>
+            </p>
           </div>
           <div class="question">
-          <h4>Ubytování</h4>
-          <p>
-            Ubytování je zařízeno přímo v <a href="https://rajenka.cz/ubytovani/">areálu Rájenky</a>.
-          </p>
+            <h4>Ubytování</h4>
+            <p>
+              <a href="https://rajenka.cz/ubytovani/">Rájenka</a> je velký areál s ubytovací kapacitou pro 100 lidí a loukou pro stanování. Ubytování je většinou v chatkách od dvoulůžkových
+              až po dvanácti lůžkové, většina je pro sedm a více. V některých jsou manželské postele, v některých jsou patrové. Koupelna je pro
+              většinu ubytovaných společná, velká a krásná. K dispozici je i louka pro stanování a obytná auta. Parkovat lze přímo v areálu.
+            </p>
           </div>
           <div class="question">
-          <h4>Kryglympiáda</h4>
-          <p>
-            Během celého sobotního dne bude probíhat <b>Kryglympiáda</b>. Soutěž pro děti i dospělé o tekuté ceny!
-          </p>
+            <h4>Kryglympiáda</h4>
+            <p>
+              Během celého sobotního dne bude probíhat <b>Kryglympiáda</b>.
+              Soutěž pro děti i dospělé o tekuté ceny!
+            </p>
           </div>
           <div class="question">
-          <h4>Dětský koutek</h4>
-          <p>
-            Pokud si budete chtít oddychnout od dětí, můžete je odložit na skákací hrad nebo do dětského koutku na hlídání.
-          </p>
+            <h4>Dětský koutek</h4>
+            <p>
+              Pokud si budete chtít oddychnout od dětí, můžete je odložit na
+              skákací hrad nebo do dětského koutku na hlídání.
+            </p>
           </div>
           <div class="question">
-          <h4>Svatební dary</h4>
-          <p>Máme malý dům, tak spíše než hmotné dary oceníme drobné na pivo.</p>
+            <h4>Dress code</h4>
+            <p>
+              Žádný! Vemte si to, v čem se budete cítit dobře. Je to slavnost,
+              ale je na louce uprostřed lesů. Podpatky nedoporučujeme.
+            </p>
           </div>
-
+          <div class="question">
+            <h4>Svatební dary</h4>
+            <p>
+              Máme malý dům, tak spíše než hmotné dary oceníme drobné na pivo.
+            </p>
+          </div>
+          <div class="question">
+            <h4>Tip od nevěsty</h4>
+            <p>
+              Vzhledem k nabitému hudebnímu programu a tomu, že moc nevíme, jak bude které ubytování odhlučněné, doporučujeme raději přibalit špunty do uší.
+            </p>
+          </div>
         </section>
       </div>
     </div>
