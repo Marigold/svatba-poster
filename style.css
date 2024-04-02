@@ -41,14 +41,14 @@ html {
 
 .title-container {
   grid-row: 1;
-  grid-column: 1;
+  grid-column: 1/3;
 }
 
 .title {
   color: #74b475;
   margin-right: 10px;
   margin-bottom: 0;
-  text-align: right;
+  text-align: center;
 }
 .title .name,
 .title .year {
@@ -70,24 +70,6 @@ html {
   /* text-decoration: none; */
 }
 
-/* LINEUP FRIDAY */
-.first {
-  grid-row: 1;
-  grid-column: 2;
-  justify-content: center;
-  position: relative;
-  padding-left: 10px;
-}
-
-.first::before {
-  content: "";
-  position: absolute; /* Position it absolutely within .first */
-  left: 0; /* Adjust this to place the line correctly */
-  top: 0; /* Align to the top */
-  height: 100%; /* Span the full height */
-  width: 1px; /* Line thickness */
-  background-color: #000; /* Line color */
-}
 
 /* LINEUP SATURDAY */
 .second {
